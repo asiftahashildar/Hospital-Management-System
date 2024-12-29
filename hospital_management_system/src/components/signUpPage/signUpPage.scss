@@ -1,0 +1,58 @@
+@mixin disPro($dis,$align,$justify){
+    display: $dis;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+.signupContainer{
+    height: 100vh;
+    // background-color: #E5EFF4;
+    background-image: url('../../../public/health-still-life-with-copy-space.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    @include disPro(flex, center,center);
+    .login-fields-container{
+        @include disPro(flex, center,center);
+        width: 30%;
+        height: 60vh;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        border-radius: 10px;
+        background-color: #ffff;
+        .form{
+            @include disPro(flex, center,center);
+            flex-direction: column;
+            gap: 25px;
+            input{
+                height: 40px;
+                width: 160%;
+                padding: 15px;
+                font-size: 12px;
+                font-weight: 700;
+                border-radius: 10px;
+                border: 2px solid #4d8cad;
+                color: #1A6D9A;
+                text-decoration: none;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+            input:focus, textarea:focus, select:focus {
+                outline: none;
+              }
+            .login-button{
+                width: 160%;
+                height: 40px;
+                background-color: #1A6D9A;
+                border: 1px solid #1A6D9A;
+                color: #fff;
+                padding: 10px;
+                font-size: 15px;
+                font-weight: 600;
+                border-radius: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+        }
+    }
+}
